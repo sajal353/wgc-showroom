@@ -4,17 +4,24 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>WGC</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
     rel="stylesheet" />
 </head>
 
-<body class="font-poppins">
+<body class="font-poppins overflow-x-hidden">
+
+    <div class="curtain fixed top-0 left-0 w-full h-screen flex justify-center items-center bg-black text-white z-10 pointer-events-none">
+        <div class="info text-center">
+            <h1 class="text-2xl font-semibold">Loading... <span class="percent">0%</span></h1>
+            <p class="progress mt-4"></p>
+        </div>
+    </div>
     
-    <main class="h-screen w-full bg-gray-900 text-white p-8">
-        <h1 class="text-2xl">HELLO PROJECT!</h1>
-    </main>
+    <canvas class="webgl fixed top-0 left-0"></canvas>
+
+    <audio src="./sounds/bg.mp3" class="bgAudio"></audio>
 
     <script type="module" src="/main.js"></script>
 </body>
